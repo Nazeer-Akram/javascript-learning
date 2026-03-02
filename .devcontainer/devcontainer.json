@@ -1,22 +1,40 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
-	"name": "Node.js",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-24-bookworm"
+  "name": "Node.js Developer Environment",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20-bookworm",
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+  // 1. Add essential features (CLI tools, Docker, etc.)
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/common-utils:1": {
+      "configureZshAsDefaultShell": true
+    }
+  },
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+  // 2. Automate setup: Install dependencies as soon as the container builds
+  "postCreateCommand": "npm install",
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "yarn install",
+  // 3. Port Forwarding: Map container ports to your local machine
+  // 3000 (React/Next.js), 5000 (Express), 9229 (Node Debugger)
+  "forwardPorts": [3000, 5000, 9229],
 
-	// Configure tool-specific properties.
-	// "customizations": {},
+  // 4. VS Code Customizations: Force specific extensions and settings
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "christian-kohler.npm-intellisense",
+        "ms-vscode.vscode-typescript-next",
+        "firsttris.vscode-jest-runner"
+      ]
+    }
+  },
 
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+  // 5. Use the non-root 'node' user for better security/permission mapping
+  "remoteUser": "node"
 }
