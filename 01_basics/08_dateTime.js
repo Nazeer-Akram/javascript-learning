@@ -16,6 +16,8 @@ let learningDate = new Date("2026-03-04");
 
 //8. console.log(convertEpochToTime.toLocaleString("IN-en"));
 
+//9. Date.now() Returns always current time in Miliseconds
+
 //Task_1. let have task let say there is date of 04-03-2026, here you need to add or increase a day to make it 05-03-2026
 
 let convertTo = learningDate.getTime();
