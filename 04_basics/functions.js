@@ -31,3 +31,9 @@ function withoutParameter(num_1 = "Nazeer") {
   return num_1;
 }
 console.log(withoutParameter());
+
+//      summary
+// 1. Empty Parameters ()
+// 2. Parameter with value
+// 3. parameter with default value
+// 4. Differenec btween Console and return
