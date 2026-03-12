@@ -5,6 +5,7 @@
 //case 2: Arrow Function Syntax 2 if need to define with single line : ()=>
 //case 3: Immediately Invoked Function with normal function and arraow Function
 //Case 4: iffi + arraow + argument
+//Case 5: ARROW + THIS Hence This Objet is not available in arraow functions
 
 //-------------------------------------------------------case 1: Arrow Function Syntax 1 = ()=>{}
 
@@ -36,3 +37,9 @@ let myarrowFun_2 = (num_1, num_2) => num_1 + num_2;
 
 //--------------------------------------------------------Case 4: iffi + arraow + argument
 ((num_1, num_2) => console.log(num_1 + num_2))(5, 2);
+
+//--------------------------------------------------------Case 5: ARROW + THIS Hence This Objet is not available in arraow functions
+
+(() => {
+  console.log(this);
+})();
