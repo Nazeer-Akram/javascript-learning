@@ -1,0 +1,38 @@
+//Task Summary
+
+// Task 2: Find the sum of argument passed in REST operator using function
+// Task 2: from the given argument need to differntitate king and kingdom the the first data would be considerd a king and rest should be considered as kingdom usw Rest Operator for the solution
+
+//-------------------------------------------------------------------- Task 2: Find the sum of argument passed in REST operator
+function myFunction_2(...parametervalue) {
+  //console.log(parametervalue);
+
+  let i = 0;
+  let addition = 0;
+  while (i < parametervalue.length) {
+    addition = addition + parametervalue[i];
+    i++;
+  }
+
+  return addition;
+}
+
+console.log(myFunction_2(1, 2, 3, 4, 5, 6));
+//-------------------------------------------------------------------- Task 2: from the given argument need to differntitate king and kingdom the the first data would be considerd a king and rest should be considered as kingdom usw Rest Operator for the solution
+function evenOrganise(...totalCount) {
+  let Specialguest = "";
+  let restGust = "";
+  let counter = 0;
+
+  while (counter < totalCount.length) {
+    //Using Ternary Operator for condition check
+    counter == 0
+      ? (Specialguest = totalCount[counter])
+      : (restGust = restGust + " " + totalCount[counter]);
+    counter++;
+  }
+  return console.log(`The special gust is ${Specialguest} and the rest gust are 
+    ${restGust}`);
+}
+
+evenOrganise("Nazeer", "Zubair &", "Hamza");
