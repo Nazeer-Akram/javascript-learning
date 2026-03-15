@@ -2,7 +2,7 @@
 
 //function with rest Operartor   : used for multiple parameters without defining them individualy
 //object in function
-//object in function
+//Array object in function
 
 //Rest Operator : This returns avalue in the form of an arrray
 
