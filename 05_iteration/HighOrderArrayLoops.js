@@ -36,4 +36,7 @@ for (const key in myObj) {
 
 //-------------------------------------------------------------foreach loop
 
-myArray.forEach((iteration) => console.log(iteration));
+let myVar;
+myVar = myArray.forEach((iteration) => console.log(iteration));
+
+console.log(myVar); //note it does not return any value it only does iteration means i short you cannot store the result in the variable
