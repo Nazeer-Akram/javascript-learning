@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parent To Child, Child To Parent</title>
+  </head>
+  <body style="background-color: darkslategrey; color: aliceblue">
+    <div class="container">
+      <div id="leader">
+        <h1 class="leaderName">Nazeer Akram</h1>
+      </div>
+      <div id="daysName">
+        <ul class="week">
+          <li class="days">Monday</li>
+          <li class="days">Tuesday</li>
+          <li class="days">Wednesday</li>
+          <li class="days">Thursday</li>
+          <li class="days">Friday</li>
+          <li class="days">Saturday</li>
+          <li class="days">Sunday</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script>
+    //Summary for parent to child and child to Parent
+    //1. children
+    //2. firstElementChild
+    //3. lastElementChild
+    //4. nextElemetSibling
+    //5. parentElemet
+    //6. childNodes
+
+    //note
+    //innerHTML : display all the HTML included text
+    //innerText : only text as like user
+    //textContent : Same as InnerHTML but doesn't Display HTML
+
+    let weekSelection = document.querySelector(".week"); // Returns HTML tag
+    let weekChildren = weekSelection.children; // Returns HTML Collection
+    let firstChild = weekSelection.firstElementChild; // Returns HTML tag
+    let lastChild = weekSelection.lastElementChild; // Returns HTML tag
+    let childSibling = firstChild.nextElementSibling; // Returns next sibling HTML tag
+    let childNodes = weekSelection.childNodes; // Returns always node list of the child
+    let childToParent = firstChild.parentElement; //Returns Child Parent Element
+  </script>
+</html>
