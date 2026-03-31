@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPS</title>
+  </head>
+  <body style="background-color: darkslategrey; color: aliceblue">
+    <ul class="week">
+      <li class="javaScript">JavaScript</li>
+      <li>Css</li>
+    </ul>
+  </body>
+  <script>
+    //Summary
+    //creating single element
+    //creating element with function
+    //Editing or replacing the Element
+    //Removing an Element
+
+    //----------------------------------------------- creating single element
+
+    let creatingElement = document.createElement("div"); //Createing an Element
+    creatingElement.setAttribute("class", "container"); //Adding Attribute
+    creatingElement.setAttribute("style", "color:red"); //Adding Attribute
+    let textNode = document.createTextNode(
+      "Hi My name is Nazeer and this Parra is created through Javascript",
+    ); // Creating text Content
+    creatingElement.appendChild(textNode); // adding textContent to the HTML Tag
+    document.body.appendChild(creatingElement); // adding HTML Element to the document.
+
+    //----------------------------------------------- creating element with function
+    function creatingLi(lang) {
+      let selectParentElement = document.querySelector(".week"); // selecting the parent Element where the child needs to be created
+      let creatingLi = document.createElement("li"); // Creating an Element
+      let textNode = document.createTextNode(lang); // Creating a text Node
+      creatingLi.appendChild(textNode); // Adding the text node to the created element
+      selectParentElement.appendChild(creatingLi); // Adding the element to the parent element
+    }
+
+    creatingLi("MongoDb");
+    creatingLi("React");
+
+    //-----------------------------------------------replaceing element
+
+    let replacingElement = document.createElement("li"); //creating an element that will be replaced with
+    replacingElement.setAttribute("class", "replacedElement"); //Adding the attribute
+    let newTextContent = document.createTextNode(
+      "Hi im the replaced Element with PHP", //Creating a text Node
+    );
+    replacingElement.appendChild(newTextContent); //Adding the content
+    document.querySelector(".javaScript").replaceWith(replacingElement); //Final replacing the Element
+
+    //-----------------------------------------------Removing element
+
+    let firstElement = document.querySelectorAll("li")[0]; //Selected the child that will be removed
+    let selectParentElement = document.querySelector(".week"); //Selecting the parent
+    selectParentElement.removeChild(firstElement); //Final Removed Statement
+  </script>
+</html>
