@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPS</title>
+  </head>
+  <body style="background-color: darkslategrey; color: aliceblue">
+    <div class="container">
+      <div id="leader">
+        <h1 class="leaderName">Nazeer Akram</h1>
+      </div>
+      <div id="daysName">
+        <ul class="week">
+          <li class="days">Monday</li>
+          <li class="days">Tuesday</li>
+          <li class="days">Wednesday</li>
+          <li class="days">Thursday</li>
+          <li class="days">Friday</li>
+          <li class="days">Saturday</li>
+          <li class="days">Sunday</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script>
+    //Summary DOM Selector
+    //1. Id Selector and its Property
+    //2. Class Selector and its Property
+    //3. tag Selector and its Property
+    //4. Query Selector and its Property
+    //5. QueryAll Selector and its Property
+
+    //--------------------------------------------1. Id Selector and its Property
+    let myId = document.getElementById("leader"); //Returns whole html tag
+    let myClass = document.getElementsByClassName("week"); //Returns html collection
+    let myTag = document.getElementsByTagName("li"); //Returns html collection
+    let myQuery = document.querySelector(".days"); //Returns whole html tag
+    let myQueryAll = document.querySelectorAll(".days"); //Returns nodelist (Note In biuld Foreach functionality)
+  </script>
+</html>
