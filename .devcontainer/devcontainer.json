@@ -5,7 +5,7 @@
   // 1. Add essential features (CLI tools, Docker, etc.)
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/devcontainers/features/common-utils:1": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
       "configureZshAsDefaultShell": true
     }
   },
